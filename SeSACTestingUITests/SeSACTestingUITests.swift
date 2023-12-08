@@ -26,7 +26,20 @@ final class SeSACTestingUITests: XCTestCase {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
-
+        
+        let idTextField = app.textFields["🪪 ID"]
+        idTextField.tap()
+        idTextField.typeText("1234567")
+        
+        let emailTextField = app.textFields["📧 Email"]
+        emailTextField.tap()
+        emailTextField.typeText("abcd@12.co")
+        
+        
+        let passwordTextField = app.textFields["🗝️ Password"]
+        passwordTextField.tap()
+        passwordTextField.typeText("123#@#")
+        
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
