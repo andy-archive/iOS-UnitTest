@@ -27,20 +27,11 @@ final class SeSACTestingUITests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
         
-        let idTextField = app.textFields["🪪 ID"]
-        idTextField.tap()
-        idTextField.typeText("1234567")
+        app.textFields["idTextField"].tap()
+        app.textFields["idTextField"].typeText("12345678")
         
-        let emailTextField = app.textFields["📧 Email"]
-        emailTextField.tap()
-        emailTextField.typeText("abcd@12.co")
-        
-        
-        let passwordTextField = app.textFields["🗝️ Password"]
-        passwordTextField.tap()
-        passwordTextField.typeText("123#@#")
-        
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        app.textFields["passwordTextField"].tap()
+        app.textFields["passwordTextField"].typeText("12345678")
     }
 
     func testLaunchPerformance() throws {

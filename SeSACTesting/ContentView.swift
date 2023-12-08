@@ -20,8 +20,14 @@ struct ContentView: View {
                 .foregroundStyle(.tint)
             Text("Hello, world!")
             TextField("📧 Email", text: $emailText)
+                .font(.title)
+                .foregroundStyle(Color.green)
+                .accessibilityIdentifier("emailTextField")
+                .accessibilityLabel("이메일 기입란")
             TextField("🪪 ID", text: $idText)
+                .accessibilityIdentifier("idTextField")
             TextField("🗝️ Password", text: $passwordText)
+                .accessibilityIdentifier("passwordTextField")
         }
         .padding()
     }
