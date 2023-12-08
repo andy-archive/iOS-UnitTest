@@ -7,11 +7,13 @@
 
 import SwiftUI
 
+//MARK: - ContentView
 struct ContentView: View {
     
     @State private var emailText = ""
     @State private var idText = ""
     @State private var passwordText = ""
+    @State private var showPage = false
     
     var body: some View {
         VStack {
@@ -28,8 +30,23 @@ struct ContentView: View {
                 .accessibilityIdentifier("idTextField")
             TextField("🗝️ Password", text: $passwordText)
                 .accessibilityIdentifier("passwordTextField")
+            Button("LOGIN") {
+                showPage = true
+            }
+            .accessibilityIdentifier("loginButton")
         }
         .padding()
+        .sheet(isPresented: $showPage, content: {
+            NextView()
+        })
+    }
+}
+
+//MARK: - NextView (presented from ContentView)
+struct NextView: View {
+    
+    var body: some View {
+        Text("NEXT View")
     }
 }
 
