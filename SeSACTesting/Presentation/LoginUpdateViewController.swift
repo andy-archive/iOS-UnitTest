@@ -38,6 +38,10 @@ final class LoginUpdateViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var checkTextField: UITextField!
     
+    //MARK: - Properties
+    private let validator = Validator()
+    private var user = User(email: "", password: "", check: "")
+    
     //MARK: - Initializer
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +49,19 @@ final class LoginUpdateViewController: UIViewController {
     
     //MARK: - Action
     @IBAction private func loginButtonClicked(_ sender: UIButton) {
+        
+        user = User(
+            email: emailTextField.text!,
+            password: passwordTextField.text!,
+            check: checkTextField.text!
+        )
+        
+        if validator.isEqualPassword(
+            password: user.password,
+            check: user.check
+        ) {
+            
+        }
         
     }
 }
