@@ -41,7 +41,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <action selector="loginButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xJ8-hi-MA5"/>
+                                    <action selector="loginButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Chu-Xk-byO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -49,14 +49,63 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="checkTextField" destination="7DW-KD-lsF" id="vLt-Ik-b7F"/>
-                        <outlet property="emailTextField" destination="FC1-LN-9Tx" id="mcn-HT-Dg2"/>
-                        <outlet property="passwordTextField" destination="Iba-PQ-Jvr" id="9gT-Ec-mXj"/>
+                        <outlet property="checkTextField" destination="7DW-KD-lsF" id="Thv-wM-WBR"/>
+                        <outlet property="emailTextField" destination="FC1-LN-9Tx" id="oKj-Cs-Hn6"/>
+                        <outlet property="passwordTextField" destination="Iba-PQ-Jvr" id="Xhm-hE-F1g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="113.74045801526717" y="-34.507042253521128"/>
+        </scene>
+        <!--LoginUpdateViewController-->
+        <scene sceneID="JB4-bl-ULS">
+            <objects>
+                <viewController storyboardIdentifier="LoginUpdateViewController" title="LoginUpdateViewController" id="szN-c8-p1E" customClass="LoginUpdateViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ADR-ij-FwQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RWi-Iu-59h">
+                                <rect key="frame" x="60" y="108" width="273" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0qj-NT-mB5">
+                                <rect key="frame" x="60" y="167" width="273" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gr4-CN-JPI">
+                                <rect key="frame" x="60" y="233" width="273" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7z-2l-fUh">
+                                <rect key="frame" x="60" y="299" width="273" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="loginButtonClicked:" destination="szN-c8-p1E" eventType="touchUpInside" id="yAc-Q6-Reb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vbz-se-rY2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="checkTextField" destination="gr4-CN-JPI" id="nI6-tl-rzR"/>
+                        <outlet property="emailTextField" destination="RWi-Iu-59h" id="PK5-o9-Jk5"/>
+                        <outlet property="passwordTextField" destination="0qj-NT-mB5" id="fK8-Pc-J5x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ul3-M7-GVg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="874" y="-35"/>
         </scene>
     </scenes>
     <resources>

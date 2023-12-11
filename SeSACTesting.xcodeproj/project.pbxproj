@@ -18,6 +18,7 @@
 		38999BD72B269AE500478CF1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38999BD62B269AE500478CF1 /* Login.storyboard */; };
 		38999BD92B269B9600478CF1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38999BD82B269B9600478CF1 /* LoginViewController.swift */; };
 		38999BDC2B26A8BF00478CF1 /* LoginTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38999BDB2B26A8BE00478CF1 /* LoginTestCase.swift */; };
+		38999BDF2B26AEA700478CF1 /* LoginUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38999BDE2B26AEA700478CF1 /* LoginUpdateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		38999BD62B269AE500478CF1 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		38999BD82B269B9600478CF1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		38999BDB2B26A8BE00478CF1 /* LoginTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTestCase.swift; sourceTree = "<group>"; };
+		38999BDE2B26AEA700478CF1 /* LoginUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUpdateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				386FCD9C2B22A65000822DFD /* ContentView.swift */,
 				38999BD62B269AE500478CF1 /* Login.storyboard */,
 				38999BD82B269B9600478CF1 /* LoginViewController.swift */,
+				38999BDE2B26AEA700478CF1 /* LoginUpdateViewController.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38999BD92B269B9600478CF1 /* LoginViewController.swift in Sources */,
+				38999BDF2B26AEA700478CF1 /* LoginUpdateViewController.swift in Sources */,
 				386FCD9D2B22A65000822DFD /* ContentView.swift in Sources */,
 				386FCD9B2B22A65000822DFD /* SeSACTestingApp.swift in Sources */,
 			);
