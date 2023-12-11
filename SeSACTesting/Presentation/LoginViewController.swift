@@ -10,9 +10,9 @@ import UIKit
 final class LoginViewController: UIViewController {
     
     //MARK: - UI
-    @IBOutlet private weak var emailTextField: UITextField!
-    @IBOutlet private weak var passwordTextField: UITextField!
-    @IBOutlet private weak var checkTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var checkTextField: UITextField!
     
     //MARK: - Initializer
     override func viewDidLoad() {
@@ -30,7 +30,7 @@ final class LoginViewController: UIViewController {
     }
     
     //MARK: - Business Logic
-    private func isValidEmail() -> Bool {
+    func isValidEmail() -> Bool {
         guard let check = emailTextField.text else {
             return false
         }
@@ -41,7 +41,7 @@ final class LoginViewController: UIViewController {
         guard let check = emailTextField.text else {
             return false
         }
-        return check.count <= 12
+        return check.count >= 6 && check.count <= 12
         
     }
     
