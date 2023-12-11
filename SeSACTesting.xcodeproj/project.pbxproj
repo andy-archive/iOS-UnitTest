@@ -17,6 +17,7 @@
 		386FCDC62B22A6DD00822DFD /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 386FCDC52B22A6DD00822DFD /* .gitignore */; };
 		38999BD72B269AE500478CF1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38999BD62B269AE500478CF1 /* Login.storyboard */; };
 		38999BD92B269B9600478CF1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38999BD82B269B9600478CF1 /* LoginViewController.swift */; };
+		38999BDC2B26A8BF00478CF1 /* LoginTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38999BDB2B26A8BE00478CF1 /* LoginTestCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		386FCDC52B22A6DD00822DFD /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		38999BD62B269AE500478CF1 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		38999BD82B269B9600478CF1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		38999BDB2B26A8BE00478CF1 /* LoginTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTestCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				386FCDAB2B22A65300822DFD /* SeSACTestingTests.swift */,
+				38999BDB2B26A8BE00478CF1 /* LoginTestCase.swift */,
 			);
 			path = SeSACTestingTests;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				386FCDAC2B22A65300822DFD /* SeSACTestingTests.swift in Sources */,
+				38999BDC2B26A8BF00478CF1 /* LoginTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

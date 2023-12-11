@@ -14,8 +14,8 @@ final class SeSACTestingTests: XCTestCase {
     var loginUnitTest: LoginViewController!
     
     //MARK: - setUpWithError
-    override func setUpWithError() throws {
-        // Test 시작 전 값 세팅
+    override func setUpWithError() throws { // Test 시작 전 값 세팅
+        print(#function, "🖥️🖥️🖥️🖥️🖥️🖥️🖥️🖥️🖥️🖥️🖥️🖥️🖥️🖥️🖥️🖥️🖥️🖥️🖥️🖥️🖥️")
         
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
@@ -26,23 +26,36 @@ final class SeSACTestingTests: XCTestCase {
     
     //MARK: - setUpWithError
     override func tearDownWithError() throws {
+        print(#function, "💧💧💧💧💧💧💧💧💧💧💧💧💧💧💧💧💧💧💧💧💧")
+        
         // 테스트 이후 초기화 (nil)
         loginUnitTest = nil
     }
     
     //MARK: - Test (1) 테스트 성공 && 성공 케이스 테스트
     func testLoginViewController_isValidEmail_ReturnTrue() throws {
-        loginUnitTest.emailTextField.text = "andy@test.com"
+        print(#function, "🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀")
         
+        loginUnitTest.emailTextField.text = "andy@test.com"
         XCTAssertTrue(loginUnitTest.isValidEmail(), "없거나, 6글자 미만")
     }
     
     //MARK: - Test (2) 테스트 성공 ⭐️ BUT 실패 케이스 테스트
     func testLoginViewController_isValidEmail_ReturnFalse() throws {
-        loginUnitTest.emailTextField.text = "andy.com"
+        print(#function, "🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥")
         
-        XCTAssertTrue(loginUnitTest.isValidEmail(), "없거나, 6글자 미만")
+        loginUnitTest.emailTextField.text = "andy.com"
+        XCTAssertFalse(loginUnitTest.isValidEmail(), "없거나, 6글자 미만")
     }
+    
+    //MARK: - Test (3) 테스트 성공
+    func testLoginViewController_isValidEmail_ReturnNil() throws {
+        print(#function, "📌📌📌📌📌📌📌📌📌📌📌📌📌📌📌📌📌📌📌📌📌")
+        loginUnitTest.emailTextField.text = nil
+        XCTAssertFalse(loginUnitTest.isValidEmail(), "test is false by optional binding")
+    }
+    
+    
     
     func testExample() throws {
         // This is an example of a functional test case.
