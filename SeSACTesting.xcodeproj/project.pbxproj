@@ -16,6 +16,7 @@
 		386FCDB82B22A65300822DFD /* SeSACTestingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386FCDB72B22A65300822DFD /* SeSACTestingUITestsLaunchTests.swift */; };
 		386FCDC62B22A6DD00822DFD /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 386FCDC52B22A6DD00822DFD /* .gitignore */; };
 		38999BD72B269AE500478CF1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38999BD62B269AE500478CF1 /* Login.storyboard */; };
+		38999BD92B269B9600478CF1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38999BD82B269B9600478CF1 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		386FCDC42B22A69E00822DFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		386FCDC52B22A6DD00822DFD /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		38999BD62B269AE500478CF1 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		38999BD82B269B9600478CF1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +102,11 @@
 		386FCD992B22A65000822DFD /* SeSACTesting */ = {
 			isa = PBXGroup;
 			children = (
+				38999BDA2B269BEA00478CF1 /* Presentation */,
 				386FCDC42B22A69E00822DFD /* Info.plist */,
 				386FCD9A2B22A65000822DFD /* SeSACTestingApp.swift */,
-				386FCD9C2B22A65000822DFD /* ContentView.swift */,
 				386FCD9E2B22A65200822DFD /* Assets.xcassets */,
 				386FCDA02B22A65200822DFD /* Preview Content */,
-				38999BD62B269AE500478CF1 /* Login.storyboard */,
 			);
 			path = SeSACTesting;
 			sourceTree = "<group>";
@@ -133,6 +134,16 @@
 				386FCDB72B22A65300822DFD /* SeSACTestingUITestsLaunchTests.swift */,
 			);
 			path = SeSACTestingUITests;
+			sourceTree = "<group>";
+		};
+		38999BDA2B269BEA00478CF1 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				386FCD9C2B22A65000822DFD /* ContentView.swift */,
+				38999BD62B269AE500478CF1 /* Login.storyboard */,
+				38999BD82B269B9600478CF1 /* LoginViewController.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38999BD92B269B9600478CF1 /* LoginViewController.swift in Sources */,
 				386FCD9D2B22A65000822DFD /* ContentView.swift in Sources */,
 				386FCD9B2B22A65000822DFD /* SeSACTestingApp.swift in Sources */,
 			);
