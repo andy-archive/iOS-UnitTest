@@ -18,22 +18,34 @@ import Foundation
      - 🔥 브랜반점의 코드 변화가 휴님에게 곧바로 영향을 미친다
      - 🔥 하위 모듈의 코드 변화가 상위 모듈에 영향을 미친다
  - ❓ 이를 어떻게 해결해야 할까?
- 
+ - ✅ 프로토콜에 의해 해결
+ -> 각각의 레스토랑이 레스토랑 프로토콜을 준수하도록
+ -> 각각의 주방장이 주방장 프로토콜을 준수하도록
+ -> 구현체가 아닌 추상화에 의존하도록 변경하기
  */
 
 //MARK: - ⭐️ (0) Protocol
-protocol Restaurant {
+protocol HamburgerRestaurant {
     func makeLunchMenu() -> String
 }
 
-protocol OwnerRecipe {
+protocol BunsikRestaurant {
+    func makeLunchMenu() -> String
+}
+
+protocol Owner {
     func makeMainMenu() -> String
     func makeSideMenu() -> String
     func makeDrink() -> String
 }
 
+protocol Customer {
+    func selectHamburger() -> String
+    func selectBunsik() -> String
+}
+
 //MARK: - (1) Owners
-class Bran: OwnerRecipe {
+final class Bran: Owner {
     
     func makeMainMenu() -> String {
         return "Bran's Signature Hamburger"
@@ -51,7 +63,7 @@ class Bran: OwnerRecipe {
     }
 }
 
-class Koko: OwnerRecipe {
+final class Koko: Owner {
     
     func makeMainMenu() -> String {
         return "Koko's Gimbap"
@@ -67,18 +79,30 @@ class Koko: OwnerRecipe {
 }
 
 //MARK: - (2) Restaurants
-class BranRestaurant: Restaurant {
+final class BranRestaurant: HamburgerRestaurant {
     
-    private let owner = Bran()
+    private let owner: Owner
+    
+    init(
+        owner: Owner
+    ) {
+        self.owner = owner
+    }
     
     func makeLunchMenu() -> String {
         return owner.makeMainMenu() + owner.makeSideMenu() + owner.makeDrink()
     }
 }
 
-class KokoRestaurant: Restaurant {
+final class KokoRestaurant: BunsikRestaurant {
     
-    private let owner = Koko()
+    private let owner: Owner
+    
+    init(
+        owner: Owner
+    ) {
+        self.owner = owner
+    }
     
     func makeLunchMenu() -> String {
         return owner.makeMainMenu() + owner.makeSideMenu() + owner.makeDrink()
@@ -93,16 +117,29 @@ class KokoRestaurant: Restaurant {
  
  - ❓ 상위 모듈이 하위 모듈의 변화를 모르고 코드만 가져올 수는 없을까?
  */
-class Hue {
+final class Hue: Customer {
     
-    var hamburgerRestaurant = BranRestaurant()
-    var bunsikRestaurant = KokoRestaurant()
+    private var hamburgerRestaurant: HamburgerRestaurant
+    private var bunsikRestaurant: BunsikRestaurant
     
-    func selectHamburgerMenu() -> String {
+    init(
+        hamburgerRestaurant: HamburgerRestaurant,
+        bunsikRestaurant: BunsikRestaurant
+    ) {
+        self.hamburgerRestaurant = hamburgerRestaurant
+        self.bunsikRestaurant = bunsikRestaurant
+    }
+    
+    func selectHamburger() -> String {
         hamburgerRestaurant.makeLunchMenu()
     }
     
-    func selectBunsikMenu() -> String {
+    func selectBunsik() -> String {
         bunsikRestaurant.makeLunchMenu()
     }
 }
+
+let hue = Hue(
+    hamburgerRestaurant: BranRestaurant(owner: Bran()),
+    bunsikRestaurant: KokoRestaurant(owner: Koko())
+)
