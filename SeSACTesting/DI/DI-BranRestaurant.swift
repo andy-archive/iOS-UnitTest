@@ -21,56 +21,67 @@ import Foundation
  
  */
 
+//MARK: - ⭐️ (0) Protocol
+protocol Restaurant {
+    func makeLunchMenu() -> String
+}
+
+protocol OwnerRecipe {
+    func makeMainMenu() -> String
+    func makeSideMenu() -> String
+    func makeDrink() -> String
+}
+
 //MARK: - (1) Owners
-class Bran {
+class Bran: OwnerRecipe {
     
-    func makeSignatureHamburger() -> String {
+    func makeMainMenu() -> String {
         return "Bran's Signature Hamburger"
     }
     
     /* 🔥 frenchFries -> OnionRing
      - 의존 관계에 의하여 하위 모듈(BranRestaurant & Hue)에 모두 문제 발생
      */
-    func makeFrenchFries() -> String { // makeOnionRing()
+    func makeSideMenu() -> String { // makeOnionRing()
         return "Bran's FrenchFries" //"Onion Ring"
     }
     
-    func makeSoftDrink() -> String {
+    func makeDrink() -> String {
         return "Bran's Soft Drink"
     }
 }
 
-class Koko {
+class Koko: OwnerRecipe {
     
-    func makeGimbap() -> String {
+    func makeMainMenu() -> String {
         return "Koko's Gimbap"
     }
     
-    func makeRamyeon() -> String {
+    func makeSideMenu() -> String {
         return "Koko's Ramyeon"
     }
     
-    func makeEomukSoup() -> String {
+    func makeDrink() -> String {
         return "Koko's EomukSoup"
     }
 }
 
 //MARK: - (2) Restaurants
-class BranRestaurant {
+class BranRestaurant: Restaurant {
     
     private let owner = Bran()
     
     func makeLunchMenu() -> String {
-        return owner.makeSignatureHamburger() + owner.makeFrenchFries() + owner.makeSoftDrink()
+        return owner.makeMainMenu() + owner.makeSideMenu() + owner.makeDrink()
     }
 }
 
-class KokoRestaurant {
+class KokoRestaurant: Restaurant {
     
     private let owner = Koko()
     
     func makeLunchMenu() -> String {
-        return owner.makeGimbap() + owner.makeEomukSoup()
+        return owner.makeMainMenu() + owner.makeSideMenu() + owner.makeDrink()
     }
 }
 
@@ -87,11 +98,11 @@ class Hue {
     var hamburgerRestaurant = BranRestaurant()
     var bunsikRestaurant = KokoRestaurant()
     
-    func selectlunchMenuA() -> String {
+    func selectHamburgerMenu() -> String {
         hamburgerRestaurant.makeLunchMenu()
     }
     
-    func selectlunchMenuB() -> String {
+    func selectBunsikMenu() -> String {
         bunsikRestaurant.makeLunchMenu()
     }
 }
