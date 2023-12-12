@@ -1,5 +1,5 @@
 //
-//  DI-BranRestaurant.swift
+//  Protocol-DI-DIP.swift
 //  SeSACTesting
 //
 //  Created by Taekwon Lee on 12/12/23.
@@ -28,41 +28,41 @@ protocol Customer {
 }
 
 //MARK: - (1) Owners
-final class Bran: Owner {
+final class Noah: Owner {
     
     func makeMainMenu() -> String {
-        return "Bran's Signature Hamburger"
+        return "Noah's Signature Hamburger"
     }
     
     /* 🔥 frenchFries -> OnionRing
-     - 의존 관계에 의하여 하위 모듈(BranRestaurant & Hue)에 모두 문제 발생
+     - 의존 관계에 의하여 하위 모듈(NoahRestaurant & Hue)에 모두 문제 발생
      */
     func makeSideMenu() -> String { // makeOnionRing()
-        return "Bran's FrenchFries" //"Onion Ring"
+        return "Noah's FrenchFries" //"Onion Ring"
     }
     
     func makeDrink() -> String {
-        return "Bran's Soft Drink"
+        return "Noah's Soft Drink"
     }
 }
 
-final class Koko: Owner {
+final class Callie: Owner {
     
     func makeMainMenu() -> String {
-        return "Koko's Gimbap"
+        return "Callie's Gimbap"
     }
     
     func makeSideMenu() -> String {
-        return "Koko's Ramyeon"
+        return "Callie's Ramyeon"
     }
     
     func makeDrink() -> String {
-        return "Koko's EomukSoup"
+        return "Callie's EomukSoup"
     }
 }
 
 //MARK: - (2) Restaurants
-final class BranRestaurant: HamburgerRestaurant {
+final class NoahRestaurant: HamburgerRestaurant {
     
     private let owner: Owner
     
@@ -77,7 +77,7 @@ final class BranRestaurant: HamburgerRestaurant {
     }
 }
 
-final class KokoRestaurant: BunsikRestaurant {
+final class CallieRestaurant: BunsikRestaurant {
     
     private let owner: Owner
     
@@ -93,7 +93,7 @@ final class KokoRestaurant: BunsikRestaurant {
 }
 
 //MARK: - (3) Customer
-final class Hue: Customer {
+final class Andy: Customer {
     
     private var hamburgerRestaurant: HamburgerRestaurant
     private var bunsikRestaurant: BunsikRestaurant
@@ -116,26 +116,26 @@ final class Hue: Customer {
 }
 
 //MARK: - (4) 의존성 주입 (Dependency Injection)
-let bran = Bran()
-let branRestaurant = BranRestaurant(owner: bran)
+let noah = Noah()
+let noahRestaurant = NoahRestaurant(owner: noah)
 
-let koko = Koko()
-let kokoRestaurant = KokoRestaurant(owner: koko)
+let callie = Callie()
+let callieRestaurant = CallieRestaurant(owner: callie)
 
-let hue = Hue(
-    hamburgerRestaurant: branRestaurant,
-    bunsikRestaurant: kokoRestaurant
+let andy = Andy(
+    hamburgerRestaurant: noahRestaurant,
+    bunsikRestaurant: callieRestaurant
 )
 
 //MARK: - (A) 의존 관계 문제 발생과 해결책
 /*
- Bran -> Bran's Restaurant
- Hue -> trying to eat food in Bran's
+ Noah -> Noah's Restaurant
+ Hue -> trying to eat food in Noah's
  
  - 🔗 (1) 문제 발생 of 의존성
    - 휴는 상위 모듈, 브랜반점은 하위 모듈 (휴님이 브랜반점에 의존함)
      - 🔥 하위 모듈 변경 시 상위 모듈에 계속 영향을 준다
-   - Hue --> BranRestaurant --> Bran
+   - Hue --> NoahRestaurant --> Noah
      - 🔥 브랜반점의 코드 변화가 휴님에게 곧바로 영향을 미친다
      - 🔥 하위 모듈의 코드 변화가 상위 모듈에 영향을 미친다
  - ❓ 이를 어떻게 해결해야 할까?
@@ -149,7 +149,7 @@ let hue = Hue(
 /*
  - 휴는 상위 모듈, 브랜반점은 하위 모듈 (휴님이 브랜반점에 의존함)
  - 의존 관계
-   - Hue -> BranRestaurant -> Bran
+   - Hue -> NoahRestaurant -> Noah
  
  - ❓ 상위 모듈이 하위 모듈의 변화를 모르고 코드만 가져올 수는 없을까?
 */
@@ -163,15 +163,15 @@ let hue = Hue(
 
 //MARK: - (D) 의존성 주입 (Dependency Injection)
 /*
-    let bran = Bran()
-    let branRestaurant = BranRestaurant(owner: bran)
+    let Noah = Noah()
+    let NoahRestaurant = NoahRestaurant(owner: Noah)
 
-    let koko = Koko()
-    let kokoRestaurant = KokoRestaurant(owner: koko)
+    let Callie = Callie()
+    let CallieRestaurant = CallieRestaurant(owner: Callie)
 
     let hue = Hue(
-        hamburgerRestaurant: branRestaurant,
-        bunsikRestaurant: kokoRestaurant
+        hamburgerRestaurant: NoahRestaurant,
+        bunsikRestaurant: CallieRestaurant
     )
  */
 

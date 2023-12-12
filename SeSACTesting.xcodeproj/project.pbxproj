@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		38061A2E2B27EBBE00D36726 /* DI-BranRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38061A2D2B27EBBE00D36726 /* DI-BranRestaurant.swift */; };
+		38061A2E2B27EBBE00D36726 /* Protocol-DI-DIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38061A2D2B27EBBE00D36726 /* Protocol-DI-DIP.swift */; };
 		38061A302B27EBD300D36726 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 38061A2F2B27EBD300D36726 /* README.md */; };
 		38061A322B2808C500D36726 /* DI-Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38061A312B2808C500D36726 /* DI-Network.swift */; };
 		386FCD9B2B22A65000822DFD /* SeSACTestingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386FCD9A2B22A65000822DFD /* SeSACTestingApp.swift */; };
@@ -42,7 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		38061A2D2B27EBBE00D36726 /* DI-BranRestaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DI-BranRestaurant.swift"; sourceTree = "<group>"; };
+		38061A2D2B27EBBE00D36726 /* Protocol-DI-DIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Protocol-DI-DIP.swift"; sourceTree = "<group>"; };
 		38061A2F2B27EBD300D36726 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		38061A312B2808C500D36726 /* DI-Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DI-Network.swift"; sourceTree = "<group>"; };
 		386FCD972B22A65000822DFD /* SeSACTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,7 +91,7 @@
 		38061A2C2B27EBB200D36726 /* DI */ = {
 			isa = PBXGroup;
 			children = (
-				38061A2D2B27EBBE00D36726 /* DI-BranRestaurant.swift */,
+				38061A2D2B27EBBE00D36726 /* Protocol-DI-DIP.swift */,
 				38061A312B2808C500D36726 /* DI-Network.swift */,
 			);
 			path = DI;
@@ -305,7 +305,7 @@
 				38999BD92B269B9600478CF1 /* LoginViewController.swift in Sources */,
 				38999BDF2B26AEA700478CF1 /* LoginUpdateViewController.swift in Sources */,
 				386FCD9D2B22A65000822DFD /* ContentView.swift in Sources */,
-				38061A2E2B27EBBE00D36726 /* DI-BranRestaurant.swift in Sources */,
+				38061A2E2B27EBBE00D36726 /* Protocol-DI-DIP.swift in Sources */,
 				386FCD9B2B22A65000822DFD /* SeSACTestingApp.swift in Sources */,
 				38061A322B2808C500D36726 /* DI-Network.swift in Sources */,
 			);
