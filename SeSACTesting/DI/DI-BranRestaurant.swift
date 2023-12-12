@@ -11,10 +11,14 @@ import Foundation
  Bran -> Bran's Restaurant
  Hue -> trying to eat food in Bran's
  
- 📌 의존 관계 발생
- - 휴는 상위 모듈, 브랜반점은 하위 모듈 (휴님이 브랜반점에 의존함)
-   - 하위 모듈 변경 시 상위 모듈에 계속 영향을 준다
- - Hue -> BranRestaurant -> Bran
+ - 🔗 의존 관계
+   - 휴는 상위 모듈, 브랜반점은 하위 모듈 (휴님이 브랜반점에 의존함)
+     - 🔥 하위 모듈 변경 시 상위 모듈에 계속 영향을 준다
+   - Hue -> BranRestaurant -> Bran
+     - 🔥 브랜반점의 코드 변화가 휴님에게 곧바로 영향을 미친다
+     - 🔥 하위 모듈의 코드 변화가 상위 모듈에 영향을 미친다
+ - ❓ 이를 어떻게 해결해야 할까?
+ 
  */
 
 //MARK: - (1) Owners
@@ -46,8 +50,8 @@ class Koko {
         return "Koko's Ramyeon"
     }
     
-    func makeMandu() -> String {
-        return "Koko's Mandu"
+    func makeEomukSoup() -> String {
+        return "Koko's EomukSoup"
     }
 }
 
@@ -66,7 +70,7 @@ class KokoRestaurant {
     private let owner = Koko()
     
     func makeLunchMenu() -> String {
-        return owner.makeGimbap() + owner.makeRamyeon() + owner.makeMandu()
+        return owner.makeGimbap() + owner.makeEomukSoup()
     }
 }
 
@@ -75,12 +79,19 @@ class KokoRestaurant {
  - 휴는 상위 모듈, 브랜반점은 하위 모듈 (휴님이 브랜반점에 의존함)
  - 의존 관계
    - Hue -> BranRestaurant -> Bran
+ 
+ - ❓ 상위 모듈이 하위 모듈의 변화를 모르고 코드만 가져올 수는 없을까?
  */
 class Hue {
     
     var hamburgerRestaurant = BranRestaurant()
+    var bunsikRestaurant = KokoRestaurant()
     
-    func getlunchMenu() -> String {
+    func selectlunchMenuA() -> String {
         hamburgerRestaurant.makeLunchMenu()
+    }
+    
+    func selectlunchMenuB() -> String {
+        bunsikRestaurant.makeLunchMenu()
     }
 }
