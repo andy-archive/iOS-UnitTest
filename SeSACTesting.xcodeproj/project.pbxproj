@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38061A2E2B27EBBE00D36726 /* Protocol-DI-DIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38061A2D2B27EBBE00D36726 /* Protocol-DI-DIP.swift */; };
+		38061A302B27EBD300D36726 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 38061A2F2B27EBD300D36726 /* README.md */; };
+		38061A322B2808C500D36726 /* DI-Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38061A312B2808C500D36726 /* DI-Network.swift */; };
 		386FCD9B2B22A65000822DFD /* SeSACTestingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386FCD9A2B22A65000822DFD /* SeSACTestingApp.swift */; };
 		386FCD9D2B22A65000822DFD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386FCD9C2B22A65000822DFD /* ContentView.swift */; };
 		386FCD9F2B22A65200822DFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 386FCD9E2B22A65200822DFD /* Assets.xcassets */; };
@@ -39,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38061A2D2B27EBBE00D36726 /* Protocol-DI-DIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Protocol-DI-DIP.swift"; sourceTree = "<group>"; };
+		38061A2F2B27EBD300D36726 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		38061A312B2808C500D36726 /* DI-Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DI-Network.swift"; sourceTree = "<group>"; };
 		386FCD972B22A65000822DFD /* SeSACTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		386FCD9A2B22A65000822DFD /* SeSACTestingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACTestingApp.swift; sourceTree = "<group>"; };
 		386FCD9C2B22A65000822DFD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,9 +88,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38061A2C2B27EBB200D36726 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				38061A2D2B27EBBE00D36726 /* Protocol-DI-DIP.swift */,
+				38061A312B2808C500D36726 /* DI-Network.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
 		386FCD8E2B22A65000822DFD = {
 			isa = PBXGroup;
 			children = (
+				38061A2F2B27EBD300D36726 /* README.md */,
 				386FCDC52B22A6DD00822DFD /* .gitignore */,
 				386FCD992B22A65000822DFD /* SeSACTesting */,
 				386FCDAA2B22A65300822DFD /* SeSACTestingTests */,
@@ -106,6 +122,7 @@
 		386FCD992B22A65000822DFD /* SeSACTesting */ = {
 			isa = PBXGroup;
 			children = (
+				38061A2C2B27EBB200D36726 /* DI */,
 				38999BDA2B269BEA00478CF1 /* Presentation */,
 				386FCDC42B22A69E00822DFD /* Info.plist */,
 				386FCD9A2B22A65000822DFD /* SeSACTestingApp.swift */,
@@ -258,6 +275,7 @@
 			files = (
 				38999BD72B269AE500478CF1 /* Login.storyboard in Resources */,
 				386FCDA22B22A65200822DFD /* Preview Assets.xcassets in Resources */,
+				38061A302B27EBD300D36726 /* README.md in Resources */,
 				386FCDC62B22A6DD00822DFD /* .gitignore in Resources */,
 				386FCD9F2B22A65200822DFD /* Assets.xcassets in Resources */,
 			);
@@ -287,7 +305,9 @@
 				38999BD92B269B9600478CF1 /* LoginViewController.swift in Sources */,
 				38999BDF2B26AEA700478CF1 /* LoginUpdateViewController.swift in Sources */,
 				386FCD9D2B22A65000822DFD /* ContentView.swift in Sources */,
+				38061A2E2B27EBBE00D36726 /* Protocol-DI-DIP.swift in Sources */,
 				386FCD9B2B22A65000822DFD /* SeSACTestingApp.swift in Sources */,
+				38061A322B2808C500D36726 /* DI-Network.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
