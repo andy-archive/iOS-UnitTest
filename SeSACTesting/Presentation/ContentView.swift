@@ -16,7 +16,7 @@ struct ContentView: View {
     @State private var showPage = false
     
     var body: some View {
-        VStack {
+        VStack(spacing: 30) {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
@@ -32,6 +32,9 @@ struct ContentView: View {
                 .accessibilityIdentifier("passwordTextField")
             Button("LOGIN") {
                 showPage = true
+            }
+            Button("Lotto Network") {
+                NetworkManager.shared.fetchLotto(number: 1000)
             }
             .accessibilityIdentifier("loginButton")
         }
