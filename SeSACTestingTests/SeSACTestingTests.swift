@@ -11,7 +11,7 @@ import XCTest
 final class SeSACTestingTests: XCTestCase {
     
     //MARK: - system under test (시스템이 테스트를 하려는 대상)
-    var loginUnitTest: LoginViewController!
+    var sut: LoginViewController!
     
     //MARK: - setUpWithError
     override func setUpWithError() throws { // Test 시작 전 값 세팅
@@ -20,8 +20,8 @@ final class SeSACTestingTests: XCTestCase {
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
         
-        loginUnitTest = viewController
-        loginUnitTest.loadViewIfNeeded()
+        sut = viewController
+        sut.loadViewIfNeeded()
     }
     
     //MARK: - setUpWithError
@@ -29,30 +29,30 @@ final class SeSACTestingTests: XCTestCase {
         print(#function, "💧💧💧💧💧💧💧💧💧💧💧💧💧💧💧💧💧💧💧💧💧")
         
         // 테스트 이후 초기화 (nil)
-        loginUnitTest = nil
+        sut = nil
     }
     
     //MARK: - Test (1) 테스트 성공 && 성공 케이스 테스트
     func testLoginViewController_isValidEmail_ReturnTrue() throws {
         print(#function, "🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀🍀")
         
-        loginUnitTest.emailTextField.text = "andy@test.com"
-        XCTAssertTrue(loginUnitTest.isValidEmail(), "없거나, 6글자 미만")
+        sut.emailTextField.text = "andy@test.com"
+        XCTAssertTrue(sut.isValidEmail(), "없거나, 6글자 미만")
     }
     
     //MARK: - Test (2) 테스트 성공 ⭐️ BUT 실패 케이스 테스트
     func testLoginViewController_isValidEmail_ReturnFalse() throws {
         print(#function, "🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥")
         
-        loginUnitTest.emailTextField.text = "andy.com"
-        XCTAssertFalse(loginUnitTest.isValidEmail(), "없거나, 6글자 미만")
+        sut.emailTextField.text = "andy.com"
+        XCTAssertFalse(sut.isValidEmail(), "없거나, 6글자 미만")
     }
     
     //MARK: - Test (3) 테스트 성공
     func testLoginViewController_isValidEmail_ReturnNil() throws {
         print(#function, "📌📌📌📌📌📌📌📌📌📌📌📌📌📌📌📌📌📌📌📌📌")
-        loginUnitTest.emailTextField.text = nil
-        XCTAssertFalse(loginUnitTest.isValidEmail(), "test is false by optional binding")
+        sut.emailTextField.text = nil
+        XCTAssertFalse(sut.isValidEmail(), "test is false by optional binding")
     }
     
     
