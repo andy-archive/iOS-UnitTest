@@ -11,7 +11,7 @@ import Alamofire
 
 //MARK: - Protocol
 protocol NetworkProvider {
-    func fetchLotto(number: Int)
+    func fetchLotto(number: Int, completion: @escaping (LottoDTO) -> Void)
 }
 
 //MARK: - Class
@@ -21,7 +21,7 @@ final class NetworkManager: NetworkProvider {
     
     private init () { }
     
-    func fetchLotto(number: Int) { // 실제 네트워크 진행하는 구현체
+    func fetchLotto(number: Int, completion: @escaping (LottoDTO) -> Void) { // 실제 네트워크 진행하는 구현체
         // AlamoFire, JSONDecoder, Moya, ....
         
         let urlString = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=\(number)"

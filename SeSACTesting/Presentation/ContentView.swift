@@ -34,7 +34,10 @@ struct ContentView: View {
                 showPage = true
             }
             Button("Lotto Network") {
-                NetworkManager.shared.fetchLotto(number: 1000)
+                NetworkManager.shared.fetchLotto(number: 1000) { lotto in
+                    print(lotto.bnusNo, lotto.drwtNo1, lotto.drwNoDate, separator: "\n")
+                    
+                }
             }
             .accessibilityIdentifier("loginButton")
         }
