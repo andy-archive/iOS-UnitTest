@@ -25,6 +25,7 @@
 		38999BD92B269B9600478CF1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38999BD82B269B9600478CF1 /* LoginViewController.swift */; };
 		38999BDC2B26A8BF00478CF1 /* LoginTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38999BDB2B26A8BE00478CF1 /* LoginTestCase.swift */; };
 		38999BDF2B26AEA700478CF1 /* LoginUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38999BDE2B26AEA700478CF1 /* LoginUpdateViewController.swift */; };
+		38C891832B294DC700F15F1B /* NetworkMockTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C891822B294DC700F15F1B /* NetworkMockTestCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		38999BD82B269B9600478CF1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		38999BDB2B26A8BE00478CF1 /* LoginTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTestCase.swift; sourceTree = "<group>"; };
 		38999BDE2B26AEA700478CF1 /* LoginUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUpdateViewController.swift; sourceTree = "<group>"; };
+		38C891822B294DC700F15F1B /* NetworkMockTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMockTestCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				38999BDB2B26A8BE00478CF1 /* LoginTestCase.swift */,
+				38C891822B294DC700F15F1B /* NetworkMockTestCase.swift */,
 				38061A3A2B2941E800D36726 /* NetworkTestCase.swift */,
 				386FCDAB2B22A65300822DFD /* SeSACTestingTests.swift */,
 			);
@@ -346,6 +349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38C891832B294DC700F15F1B /* NetworkMockTestCase.swift in Sources */,
 				386FCDAC2B22A65300822DFD /* SeSACTestingTests.swift in Sources */,
 				38061A3B2B2941E800D36726 /* NetworkTestCase.swift in Sources */,
 				38999BDC2B26A8BF00478CF1 /* LoginTestCase.swift in Sources */,
