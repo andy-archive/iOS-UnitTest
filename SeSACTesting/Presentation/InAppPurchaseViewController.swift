@@ -40,9 +40,7 @@ extension InAppPurchaseViewController {
         if SKPaymentQueue.canMakePayments() {
             print("canMakePayments")
             
-            /*
-             ✅ 3. 인앱 상품 조회
-             */
+            /* ✅ 3. 인앱 상품 조회 */
             let request = SKProductsRequest(productIdentifiers: productIdentifier)
             request.delegate = self
             request.start()
@@ -60,7 +58,7 @@ extension InAppPurchaseViewController {
         
         SKPaymentQueue.default().add(payment)
         SKPaymentQueue.default().add(self) // delegate 구현 필요 -> SKPaymentTransaction
-        // ⛔️ No exact matches in call to instance method 'add'
+        /* ⛔️ No exact matches in call to instance method 'add' */
     }
     
 }
@@ -68,9 +66,7 @@ extension InAppPurchaseViewController {
 //MARK: - SKProductsRequestDelegate
 extension InAppPurchaseViewController: SKProductsRequestDelegate {
     
-    /*
-     ✅ 4. 인앱 상품 정보 조회
-     */
+    /* ✅ 4. 인앱 상품 정보 조회 */
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
         let products = response.products
         
@@ -93,8 +89,19 @@ extension InAppPurchaseViewController: SKProductsRequestDelegate {
 /* 구매 승인, 취소에 대한 프로토콜 */
 extension InAppPurchaseViewController: SKPaymentTransactionObserver {
     
-    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+    func receiptValidation(transaction: SKPaymentTransaction, productIdentifer: String) {
         
+        /* ✅ 구매 영수증 정보 */
+        guard
+            let receiptFileURL = Bundle.main.appStoreReceiptURL,
+            let receiptData = try? Data(contentsOf: receiptFileURL)
+        else { return }
+        
+        let receiptString = receiptData.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0))
+        print(receiptString)
+    }
+    
+    /* ✅ 트랜잭션 업데이트 케이스 */ func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         for transaction in transactions {
             
             switch transaction.transactionState {
@@ -103,6 +110,7 @@ extension InAppPurchaseViewController: SKPaymentTransactionObserver {
             case .purchased: // Transaction is in queue, user has been charged. Client should complete the transaction.
                 print("구매 완료 상태")
                 print(transaction.payment.productIdentifier)
+                
             case .failed: // Transaction was cancelled or failed before being added to the server queue.
                 print("구매 실패")
                 SKPaymentQueue.default().finishTransaction(transaction)
