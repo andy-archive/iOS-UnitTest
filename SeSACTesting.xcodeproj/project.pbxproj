@@ -21,6 +21,8 @@
 		386FCDB62B22A65300822DFD /* SeSACTestingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386FCDB52B22A65300822DFD /* SeSACTestingUITests.swift */; };
 		386FCDB82B22A65300822DFD /* SeSACTestingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386FCDB72B22A65300822DFD /* SeSACTestingUITestsLaunchTests.swift */; };
 		386FCDC62B22A6DD00822DFD /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 386FCDC52B22A6DD00822DFD /* .gitignore */; };
+		387D06392B2BE36800A012D5 /* InAppPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387D06382B2BE36800A012D5 /* InAppPurchaseViewController.swift */; };
+		387D063D2B2BE39F00A012D5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387D063C2B2BE39F00A012D5 /* BaseViewController.swift */; };
 		38999BD72B269AE500478CF1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38999BD62B269AE500478CF1 /* Login.storyboard */; };
 		38999BD92B269B9600478CF1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38999BD82B269B9600478CF1 /* LoginViewController.swift */; };
 		38999BDC2B26A8BF00478CF1 /* LoginTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38999BDB2B26A8BE00478CF1 /* LoginTestCase.swift */; };
@@ -63,6 +65,8 @@
 		386FCDB72B22A65300822DFD /* SeSACTestingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACTestingUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		386FCDC42B22A69E00822DFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		386FCDC52B22A6DD00822DFD /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		387D06382B2BE36800A012D5 /* InAppPurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchaseViewController.swift; sourceTree = "<group>"; };
+		387D063C2B2BE39F00A012D5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		38999BD62B269AE500478CF1 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		38999BD82B269B9600478CF1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		38999BDB2B26A8BE00478CF1 /* LoginTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTestCase.swift; sourceTree = "<group>"; };
@@ -185,13 +189,23 @@
 			path = SeSACTestingUITests;
 			sourceTree = "<group>";
 		};
+		387D063B2B2BE39400A012D5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				387D063C2B2BE39F00A012D5 /* BaseViewController.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		38999BDA2B269BEA00478CF1 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				387D063B2B2BE39400A012D5 /* Common */,
 				386FCD9C2B22A65000822DFD /* ContentView.swift */,
+				387D06382B2BE36800A012D5 /* InAppPurchaseViewController.swift */,
 				38999BD62B269AE500478CF1 /* Login.storyboard */,
-				38999BD82B269B9600478CF1 /* LoginViewController.swift */,
 				38999BDE2B26AEA700478CF1 /* LoginUpdateViewController.swift */,
+				38999BD82B269B9600478CF1 /* LoginViewController.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -337,8 +351,10 @@
 			files = (
 				38999BD92B269B9600478CF1 /* LoginViewController.swift in Sources */,
 				38061A392B293F7C00D36726 /* LottoDTO.swift in Sources */,
+				387D06392B2BE36800A012D5 /* InAppPurchaseViewController.swift in Sources */,
 				38999BDF2B26AEA700478CF1 /* LoginUpdateViewController.swift in Sources */,
 				386FCD9D2B22A65000822DFD /* ContentView.swift in Sources */,
+				387D063D2B2BE39F00A012D5 /* BaseViewController.swift in Sources */,
 				38061A2E2B27EBBE00D36726 /* Protocol-DI-DIP.swift in Sources */,
 				386FCD9B2B22A65000822DFD /* SeSACTestingApp.swift in Sources */,
 				38061A322B2808C500D36726 /* DI-Network.swift in Sources */,
