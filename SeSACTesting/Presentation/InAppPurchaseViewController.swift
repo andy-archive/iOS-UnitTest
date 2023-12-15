@@ -59,7 +59,7 @@ extension InAppPurchaseViewController {
         let payment = SKPayment(product: product)
         
         SKPaymentQueue.default().add(payment)
-        SKPaymentQueue.default().add(self) // delegate 구현 필요
+        SKPaymentQueue.default().add(self) // delegate 구현 필요 -> SKPaymentTransaction
         // ⛔️ No exact matches in call to instance method 'add'
     }
     
@@ -84,6 +84,34 @@ extension InAppPurchaseViewController: SKProductsRequestDelegate {
                 print(item.localizedTitle)
                 print(item.price)
                 print(item.priceLocale)
+            }
+        }
+    }
+}
+
+//MARK: - SKPaymentTransactionObserver
+/* 구매 승인, 취소에 대한 프로토콜 */
+extension InAppPurchaseViewController: SKPaymentTransactionObserver {
+    
+    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+        
+        for transaction in transactions {
+            
+            switch transaction.transactionState {
+            case .purchasing: // Transaction is being added to the server queue.
+                print("구매 중")
+            case .purchased: // Transaction is in queue, user has been charged. Client should complete the transaction.
+                print("구매 완료 상태")
+                print(transaction.payment.productIdentifier)
+            case .failed: // Transaction was cancelled or failed before being added to the server queue.
+                print("구매 실패")
+                SKPaymentQueue.default().finishTransaction(transaction)
+            case .restored: // Transaction was restored from user's purchase history.  Client should complete the transaction.
+                print("구매 복원")
+            case .deferred: // The transaction is in the queue, but its final status is pending external action.
+                print("보류 중")
+            @unknown default:
+                print("default")
             }
         }
     }
