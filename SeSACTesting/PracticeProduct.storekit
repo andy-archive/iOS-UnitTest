@@ -15,9 +15,24 @@
           "locale" : "en_US"
         }
       ],
-      "productID" : "RemoveAd",
+      "productID" : "removeAd",
       "referenceName" : "Remove Ad",
       "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "1234A748",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "premium",
+      "referenceName" : "Premium Membership",
+      "type" : "NonConsumable"
     }
   ],
   "settings" : {
