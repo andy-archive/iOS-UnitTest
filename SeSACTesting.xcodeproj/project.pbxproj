@@ -58,6 +58,7 @@
 		3807F2BB2B2FE49C008DEF55 /* Constant+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constant+UI.swift"; sourceTree = "<group>"; };
 		3807F2BD2B2FE4AB008DEF55 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		3807F2BF2B2FE796008DEF55 /* SeSACProduct.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = SeSACProduct.storekit; sourceTree = "<group>"; };
+		3807F2C02B2FE9C8008DEF55 /* PracticeProduct.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = PracticeProduct.storekit; sourceTree = "<group>"; };
 		386FCD972B22A65000822DFD /* SeSACTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		386FCD9A2B22A65000822DFD /* SeSACTestingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACTestingApp.swift; sourceTree = "<group>"; };
 		386FCD9C2B22A65000822DFD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -181,6 +182,7 @@
 				386FCD9A2B22A65000822DFD /* SeSACTestingApp.swift */,
 				3807F2B92B2FE489008DEF55 /* Utilities */,
 				3807F2BF2B2FE796008DEF55 /* SeSACProduct.storekit */,
+				3807F2C02B2FE9C8008DEF55 /* PracticeProduct.storekit */,
 			);
 			path = SeSACTesting;
 			sourceTree = "<group>";
