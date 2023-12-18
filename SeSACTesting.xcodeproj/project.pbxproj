@@ -13,6 +13,10 @@
 		38061A352B293E2A00D36726 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 38061A342B293E2A00D36726 /* Alamofire */; };
 		38061A392B293F7C00D36726 /* LottoDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38061A382B293F7C00D36726 /* LottoDTO.swift */; };
 		38061A3B2B2941E800D36726 /* NetworkTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38061A3A2B2941E800D36726 /* NetworkTestCase.swift */; };
+		3807F2BC2B2FE49C008DEF55 /* Constant+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3807F2BB2B2FE49C008DEF55 /* Constant+UI.swift */; };
+		3807F2BE2B2FE4AC008DEF55 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3807F2BD2B2FE4AB008DEF55 /* Constant.swift */; };
+		3807F2C32B2FEA73008DEF55 /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3807F2C22B2FEA73008DEF55 /* StoreView.swift */; };
+		3807F2C52B2FEAD6008DEF55 /* SeSACShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3807F2C42B2FEAD6008DEF55 /* SeSACShop.swift */; };
 		386FCD9B2B22A65000822DFD /* SeSACTestingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386FCD9A2B22A65000822DFD /* SeSACTestingApp.swift */; };
 		386FCD9D2B22A65000822DFD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386FCD9C2B22A65000822DFD /* ContentView.swift */; };
 		386FCD9F2B22A65200822DFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 386FCD9E2B22A65200822DFD /* Assets.xcassets */; };
@@ -53,6 +57,12 @@
 		38061A312B2808C500D36726 /* DI-Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DI-Network.swift"; sourceTree = "<group>"; };
 		38061A382B293F7C00D36726 /* LottoDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoDTO.swift; sourceTree = "<group>"; };
 		38061A3A2B2941E800D36726 /* NetworkTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTestCase.swift; sourceTree = "<group>"; };
+		3807F2BB2B2FE49C008DEF55 /* Constant+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constant+UI.swift"; sourceTree = "<group>"; };
+		3807F2BD2B2FE4AB008DEF55 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		3807F2BF2B2FE796008DEF55 /* SeSACProduct.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = SeSACProduct.storekit; sourceTree = "<group>"; };
+		3807F2C02B2FE9C8008DEF55 /* PracticeProduct.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = PracticeProduct.storekit; sourceTree = "<group>"; };
+		3807F2C22B2FEA73008DEF55 /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
+		3807F2C42B2FEAD6008DEF55 /* SeSACShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACShop.swift; sourceTree = "<group>"; };
 		386FCD972B22A65000822DFD /* SeSACTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		386FCD9A2B22A65000822DFD /* SeSACTestingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeSACTestingApp.swift; sourceTree = "<group>"; };
 		386FCD9C2B22A65000822DFD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -125,6 +135,32 @@
 			path = DataMapping;
 			sourceTree = "<group>";
 		};
+		3807F2B92B2FE489008DEF55 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3807F2BA2B2FE497008DEF55 /* Constants */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		3807F2BA2B2FE497008DEF55 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3807F2BD2B2FE4AB008DEF55 /* Constant.swift */,
+				3807F2BB2B2FE49C008DEF55 /* Constant+UI.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		3807F2C12B2FEA61008DEF55 /* StoreList */ = {
+			isa = PBXGroup;
+			children = (
+				3807F2C22B2FEA73008DEF55 /* StoreView.swift */,
+				3807F2C42B2FEAD6008DEF55 /* SeSACShop.swift */,
+			);
+			path = StoreList;
+			sourceTree = "<group>";
+		};
 		386FCD8E2B22A65000822DFD = {
 			isa = PBXGroup;
 			children = (
@@ -150,13 +186,16 @@
 		386FCD992B22A65000822DFD /* SeSACTesting */ = {
 			isa = PBXGroup;
 			children = (
+				386FCD9E2B22A65200822DFD /* Assets.xcassets */,
 				38061A362B293F6200D36726 /* Data */,
 				38061A2C2B27EBB200D36726 /* DI */,
-				38999BDA2B269BEA00478CF1 /* Presentation */,
 				386FCDC42B22A69E00822DFD /* Info.plist */,
-				386FCD9A2B22A65000822DFD /* SeSACTestingApp.swift */,
-				386FCD9E2B22A65200822DFD /* Assets.xcassets */,
+				38999BDA2B269BEA00478CF1 /* Presentation */,
 				386FCDA02B22A65200822DFD /* Preview Content */,
+				386FCD9A2B22A65000822DFD /* SeSACTestingApp.swift */,
+				3807F2B92B2FE489008DEF55 /* Utilities */,
+				3807F2BF2B2FE796008DEF55 /* SeSACProduct.storekit */,
+				3807F2C02B2FE9C8008DEF55 /* PracticeProduct.storekit */,
 			);
 			path = SeSACTesting;
 			sourceTree = "<group>";
@@ -200,6 +239,7 @@
 		38999BDA2B269BEA00478CF1 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				3807F2C12B2FEA61008DEF55 /* StoreList */,
 				387D063B2B2BE39400A012D5 /* Common */,
 				386FCD9C2B22A65000822DFD /* ContentView.swift */,
 				387D06382B2BE36800A012D5 /* InAppPurchaseViewController.swift */,
@@ -355,8 +395,12 @@
 				38999BDF2B26AEA700478CF1 /* LoginUpdateViewController.swift in Sources */,
 				386FCD9D2B22A65000822DFD /* ContentView.swift in Sources */,
 				387D063D2B2BE39F00A012D5 /* BaseViewController.swift in Sources */,
+				3807F2C52B2FEAD6008DEF55 /* SeSACShop.swift in Sources */,
 				38061A2E2B27EBBE00D36726 /* Protocol-DI-DIP.swift in Sources */,
+				3807F2BC2B2FE49C008DEF55 /* Constant+UI.swift in Sources */,
+				3807F2BE2B2FE4AC008DEF55 /* Constant.swift in Sources */,
 				386FCD9B2B22A65000822DFD /* SeSACTestingApp.swift in Sources */,
+				3807F2C32B2FEA73008DEF55 /* StoreView.swift in Sources */,
 				38061A322B2808C500D36726 /* DI-Network.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -533,7 +577,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -567,7 +611,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

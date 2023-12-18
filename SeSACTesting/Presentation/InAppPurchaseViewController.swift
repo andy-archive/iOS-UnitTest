@@ -8,12 +8,21 @@
 import StoreKit
 import UIKit
 
+
+/*
+ 1. 유료 계약 활성화 / 개발자 계졍 / In App Purchase Capabilities
+ 2. AppStoreConnect In App Product 등록
+ 3. 인앱 구매: 사용자 결제 가능 여부 확인 + 상품 조회 -> SKProductRequest
+ 4. SKProductsRequestDelegate로 상품 정보 조회
+ 5. SKPaymentTransactionObserver로 사용자 결제 상태 확인 -> 예외 처리
+ 6. 인앱 결제 로직 성공 -> 
+ */
 final class InAppPurchaseViewController: BaseViewController {
     
-    //MARK: - (1-1) UI
+    //MARK: - UI
     @IBOutlet private var productLabel: UILabel!
     
-    //MARK: - (1-2) Properties
+    //MARK: - Properties
     /*
      ✅ 1. 인앱 상품 ID 정의
      */
@@ -21,9 +30,9 @@ final class InAppPurchaseViewController: BaseViewController {
     var productArray = Array<SKProduct>()
     var product: SKProduct?
     
-    //MARK: - (2) Initializer
+    //MARK: - Initializer
     
-    //MARK: - (3) Protocol Methods
+    //MARK: - Protocol Methods
     override func configureUI() {
         super.configureUI()
     }
