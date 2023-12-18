@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct StoreView: View {
+    
+    //MARK: - Properties
+    @StateObject var shop = SeSACShop()
+    
+    //MARK: - UI
     var body: some View {
         HStack {
             Text("Remove Ad")
@@ -15,6 +20,10 @@ struct StoreView: View {
             Button("$99.99") {
                 print("Button")
             }
+        }
+        .padding()
+        .task {
+            await shop.fetchAllProducts()
         }
     }
 }

@@ -23,7 +23,7 @@ final class SeSACShop: ObservableObject {
                     "com.andyarchive.SeSACTesting.premium"
                 ]
             )
-            
+            allProducts = product
         } catch {
             print(error.localizedDescription)
         }
